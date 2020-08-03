@@ -69,4 +69,13 @@ def clean_data(data):
 
 左边为 negative 词云，右边为 positive 词云。出现最多的还是 film、one、movie 等名词，但是也可以看出左边出现 bad、little，右边出现 good、great、love 等词。
 
-对两类数据去除名词后再次查看词云
+## 数据集划分
+
+对数据进行随机划分，训练集和测试集的比例为 7:3，随机种子设为 42
+
+```python
+x_train, x_test, y_train, y_test = train_test_split(data['review'], data['sentiment'], test_size=0.3, random_state=42)
+```
+
+
+
